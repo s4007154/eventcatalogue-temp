@@ -2,9 +2,9 @@
 
 Make sure to npm install once in the root folder to install the EventCatalogSDK and once in the temp-catalog folder to install EventCatalog
 
-## Issue One - WriteServiceToEvent not Creating Files
+## Issue One - WriteEventToService not Creating Files
 
-For the first issue, there seems to be some sort of pathing error when attempting to `WriteServiceToEvent` in a nested structure. 
+For the first issue, there seems to be some sort of pathing error when attempting to `WriteEventToService` in a nested structure. 
 
 I have had this issue both on MACOS and Windows.
 
@@ -34,15 +34,15 @@ Then run the following command:
 node eventCatalogueCreation.mjs
 ```
 
-## Issue One - addEventToService deleting "events" Folder
+## Issue Two - addEventToService deleting "events" Folder
 
-This issue seems to be related to the following following github issue: https://github.com/event-catalog/sdk/issues/118 
+This issue seems to be related to the following github issue: https://github.com/event-catalog/sdk/issues/118 
 
-Basically, when there is more than one Event in an events folder. It will destroy eveything in it. I have also seen a variation of the issue (based on the order you preform the write and add functions) where only one event is left behind.
+Basically, when there is more than one unique "event" folder in a root <events> folder. It will destroy eveything in it. I have also seen a variation of the issue where only one event is left behind but the rest are destroyed.
 
 To replicate this issue, preform the following:
 
-1. Re-comment the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file.
+1. Re-comment or delete the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file as these are no longer needed.
 
 ```
 // await writeEventToService({

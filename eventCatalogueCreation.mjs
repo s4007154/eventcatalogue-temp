@@ -27,21 +27,21 @@ await addServiceToDomain('Payment', { id: 'InventoryService', version: '0.0.1' }
 
 // Issue 1: Uncomment the following lines to replicate the issue
 
-// await writeEventToService({
-//     id: 'InventoryAdjusted',
-//     name: 'Inventory Adjusted',
-//     version: '0.0.1',
-//     summary: 'This is a summary',
-//     markdown: '# Hello world',
-//     }, { id: 'InventoryService' });
+await writeEventToService({
+    id: 'InventoryAdjusted',
+    name: 'Inventory Adjusted',
+    version: '0.0.1',
+    summary: 'This is a summary',
+    markdown: '# Hello world',
+    }, { id: 'InventoryService' });
 
-// await writeEventToService({
-//     id: 'InventoryCleared',
-//     name: 'Inventory Cleared',
-//     version: '0.0.1',
-//     summary: 'This is a summary',
-//     markdown: '# Hello world',
-//     }, { id: 'InventoryService' });
+await writeEventToService({
+    id: 'InventoryCleared',
+    name: 'Inventory Cleared',
+    version: '0.0.1',
+    summary: 'This is a summary',
+    markdown: '# Hello world',
+    }, { id: 'InventoryService' });
 
 // Issue 2: Uncomment the following lines to replicate the issue
 
