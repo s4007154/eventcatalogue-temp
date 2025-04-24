@@ -9,7 +9,8 @@ await writeDomain({
     version: '0.0.1',
     summary: 'Domain for all things to do with payments',
     markdown: '# Hello world',
-});
+},
+    {override: true});
 
 
 await writeServiceToDomain({
@@ -18,9 +19,13 @@ await writeServiceToDomain({
     version: '0.0.1',
     summary: 'Service that handles the inventory',
     markdown: '# Hello world',
-}, { id: 'Payment' });
+}, 
+    { id: 'Payment' },
+    {override: true});
 
 await addServiceToDomain('Payment', { id: 'InventoryService', version: '0.0.1' });
+
+// Issue 1: Uncomment the following lines to replicate the issue
 
 // await writeEventToService({
 //     id: 'InventoryAdjusted',
@@ -38,6 +43,7 @@ await addServiceToDomain('Payment', { id: 'InventoryService', version: '0.0.1' }
 //     markdown: '# Hello world',
 //     }, { id: 'InventoryService' });
 
-// await addEventToService('InventoryService', 'receives', { id: 'InventoryAdjusted', version: '0.0.1' });
+// Issue 2: Uncomment the following lines to replicate the issue
 
+// await addEventToService('InventoryService', 'receives', { id: 'InventoryAdjusted', version: '0.0.1' });
 // await addEventToService('InventoryService', 'receives', { id: 'InventoryCleared', version: '0.0.1' });
