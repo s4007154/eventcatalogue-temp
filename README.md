@@ -6,7 +6,9 @@ Make sure to npm install once in the root folder to install the EventCatalogSDK 
 
 For the first issue, there seems to be some sort of pathing error when attempting to `WriteEventToService` in a nested structure. 
 
-I have had this issue both on MACOS and Windows.
+I have had this issue both on MACOS and Windows. 
+
+The difference between MACOS and Windows, is the on Windows it seems to completely error, and on MACOS it would create a massive file structure inside the root directory of event-catalogue instead of writing to Service.
 
 To replicate this issue, simplify uncomment the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file.
 
