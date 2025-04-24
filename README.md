@@ -1,5 +1,7 @@
 # eventcatalogue-temp
 
+Make sure to npm install once in the root folder to install the EventCatalogSDK and once in the temp-catalog folder to install EventCatalog
+
 ## Issue One - WriteServiceToEvent not Creating Files
 
 For the first issue, there seems to be some sort of pathing error when attempting to `WriteServiceToEvent` in a nested structure. 
