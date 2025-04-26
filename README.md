@@ -44,7 +44,9 @@ Basically, when there is more than one unique "event" folder in a root <events> 
 
 To replicate this issue, preform the following:
 
-1. Re-comment or delete the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file as these are no longer needed.
+1. Delete any files generated generated when testing for issue 1.
+
+2. Re-comment or delete the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file as these are no longer needed. 
 
 ```
 // await writeEventToService({
@@ -64,22 +66,22 @@ To replicate this issue, preform the following:
 //     }, { id: 'InventoryService' });
 ```
 
-2. Run the following command to produce the Domains and Services only:
+3. Run the following command to produce the Domains and Services only:
 
 ``` bash
 node eventCatalogueCreation.mjs
 ```
 
-3. Create two different event folders with index.mdx files
+4. Create two different event folders with index.mdx files
 
-4. Uncomment the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file.
+5. Uncomment the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file.
 
 ```
 // await addEventToService('InventoryService', 'receives', { id: 'InventoryAdjusted', version: '0.0.1' });
 // await addEventToService('InventoryService', 'receives', { id: 'InventoryCleared', version: '0.0.1' });
 
 ```
-5. Re-run the following command
+6. Re-run the following command
 
 
 ``` bash
