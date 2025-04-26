@@ -44,7 +44,7 @@ Basically, when there is more than one unique "event" folder in a root <events> 
 
 To replicate this issue, preform the following:
 
-1. Delete any files generated generated when testing for issue 1.
+1. Delete any files generated when testing for issue 1.
 
 2. Re-comment or delete the following lines in the [eventCatalogueCreation](eventCatalogueCreation.mjs) file as these are no longer needed. 
 
